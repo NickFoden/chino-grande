@@ -13,6 +13,10 @@
   width: 100vw;
 }
 
+.header_logo {
+  height: 35px;
+}
+
 .header_nav {
   padding: 0.5rem 1rem;
 }
