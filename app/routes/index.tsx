@@ -1,15 +1,16 @@
 import { useLoaderData } from "remix";
 import type { LoaderFunction } from "remix";
 import { contentClient } from "~/utils/contentful";
+import Page from "~/components/Page";
 
 type LoaderData = {
   fields: {
     introBody?: string;
     introTitle: string;
-  }
+  };
   sys: {
     id: string;
-  }
+  };
 };
 
 export let loader: LoaderFunction = async () => {
@@ -22,15 +23,15 @@ export let loader: LoaderFunction = async () => {
 export default function Index() {
   const data = useLoaderData<LoaderData>();
   return (
-    <div
-      style={{
-        display: "flex",
-        fontFamily: "courier, sans-serif",
-        lineHeight: "1.4",
-        width: "100vw",
-      }}
-    >
-      <h1 style={{ margin: "4rem auto" }}>{data.fields.introTitle}</h1>
-    </div>
+    <Page>
+      <div>
+        <h1 style={{ margin: "1rem auto", textAlign: "center" }}>
+          {data.fields.introTitle}
+        </h1>
+        <p className="text-center">
+          a cozy neighborhood restaurant and karaoke saloon
+        </p>
+      </div>
+    </Page>
   );
 }
