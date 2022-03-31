@@ -1,8 +1,11 @@
 import React from "react";
+import { Link } from "remix";
 
 const Header = () => (
   <nav className="header_nav">
-    <h1>Chino Grande</h1>
+    <Link to="/">
+      <img src={"chino-logo-straight.svg"} className="header_logo" />
+    </Link>
   </nav>
 );
 
