@@ -1,0 +1,42 @@
+* {
+  font-family: "Courier New", Courier, monospace;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+.header_nav {
+  padding: 0.5rem 1rem;
+}
+
+.page_container {
+  min-height: 85vh;
+}
+
+.footer_row {
+  display: flex;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .footer_row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer_space {
+    display: none;
+  }
+}
