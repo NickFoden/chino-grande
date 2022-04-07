@@ -6,6 +6,12 @@
   flex-direction: column;
 }
 
+.credit {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0.25rem 0 2rem;
+}
+
 .footer {
   padding: 0.5rem 1rem;
   display: flex;
@@ -21,6 +27,12 @@
   padding: 0.5rem 1rem;
 }
 
+.home_img {
+  max-width: 90vw;
+  margin: 2rem auto 0;
+  width: 750px;
+}
+
 .page_container {
   min-height: 85vh;
 }
@@ -28,6 +40,10 @@
 .footer_row {
   display: flex;
   margin: 0 auto;
+}
+
+.footer_space {
+  text-decoration: none;
 }
 
 .text-center {
