@@ -31,6 +31,15 @@ export default function Index() {
         <p className="text-center">
           a cozy neighborhood restaurant and karaoke saloon
         </p>
+        <div className="home_img">
+          <img src={"look_back_ac-bu.png"} alt="driver looking back" />
+          <div>
+            <p className="credit">
+              credit:{" "}
+              <a href="http://www.ac-bu.info/"> http://www.ac-bu.info/</a>
+            </p>
+          </div>
+        </div>
       </div>
     </Page>
   );
