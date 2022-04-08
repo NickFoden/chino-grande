@@ -1,15 +1,10 @@
 * {
   font-family: "Courier New", Courier, monospace;
 }
+
 .column {
   display: flex;
   flex-direction: column;
-}
-
-.credit {
-  display: flex;
-  justify-content: flex-end;
-  margin: 0.25rem 0 2rem;
 }
 
 .footer {
@@ -24,13 +19,16 @@
 }
 
 .header_nav {
-  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  width: 100vw;
 }
 
 .home_img {
   max-width: 90vw;
   margin: 2rem auto 0;
-  width: 750px;
+  width: 400px;
 }
 
 .page_container {
