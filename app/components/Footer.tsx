@@ -1,4 +1,5 @@
 import React from "react";
+import { SiInstagram } from "react-icons/si";
 
 const Footer = () => (
   <footer className="footer">
@@ -9,8 +10,20 @@ const Footer = () => (
       </div>
       <span className="footer_row">
         <a href="mailto:info@chinograndenyc.com">info@chinograndenyc.com</a>
-        <span className="footer_space">&nbsp;-&nbsp;</span>
+        <span className="footer_space">&nbsp;-&nbsp;</span>{" "}
         <a href="tel:19179090466">917 909-0466</a>
+        <span className="footer_space">&nbsp;-&nbsp;</span>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <a href="https://www.instagram.com/chinograndenyc/" target="_blank">
+            <SiInstagram />
+          </a>
+        </div>
       </span>
     </div>
   </footer>
