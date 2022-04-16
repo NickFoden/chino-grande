@@ -26,7 +26,7 @@ export default function Index() {
     <Page>
       <div>
         <div className="home_img">
-          <a href="http://www.ac-bu.info/">
+          <a href="https://www.youtube.com/watch?v=ACEBZ-KmuQo" target="_blank">
             <img src={"look_back_ac-bu.png"} alt="driver looking back" />
           </a>
         </div>
