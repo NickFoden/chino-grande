@@ -3,21 +3,9 @@ import type { LoaderFunction } from "remix";
 import { contentClient } from "~/utils/contentful";
 import Page from "~/components/Page";
 import MenuItem from "~/components/MenuItem";
+import WineItem from "~/components/WineItem";
 
-interface Small {
-  fields: {
-    addOnDesc: string;
-    addOnPrice: string;
-    desc: string;
-    name: string;
-    price: string;
-  };
-  sys: {
-    id: string;
-  };
-}
-
-interface Skewer {
+interface Cocktail {
   fields: {
     desc: string;
     name: string;
@@ -28,7 +16,7 @@ interface Skewer {
   };
 }
 
-interface Main {
+interface CanBottle {
   fields: {
     desc: string;
     name: string;
@@ -39,11 +27,24 @@ interface Main {
   };
 }
 
-interface Dessert {
+interface Draft {
   fields: {
     desc: string;
     name: string;
     price: string;
+  };
+  sys: {
+    id: string;
+  };
+}
+
+interface Wine {
+  fields: {
+    desc: string;
+    grapes?: string;
+    name: string;
+    price: string;
+    vintage: string;
   };
   sys: {
     id: string;
@@ -52,11 +53,13 @@ interface Dessert {
 
 type LoaderData = {
   fields: {
-    dessert: Dessert[];
-    mains: Main[];
-    service: string;
-    skewers: Skewer[];
-    smalls: Small[];
+    cansbottles: CanBottle[];
+    cocktails: Cocktail[];
+    drafts: Draft[];
+    redWines: Wine[];
+    roseWines: Wine[];
+    skinContactWines: Wine[];
+    sparklingWines: Wine[];
   };
   sys: {
     id: string;
@@ -65,7 +68,7 @@ type LoaderData = {
 
 export let loader: LoaderFunction = async () => {
   const data: LoaderData = await contentClient.getEntry(
-    "6SPsrAXZzVDg8i1eqhd5vg"
+    "6gzu0gxzi2UG8zLrkyWmqG"
   );
   return data;
 };
@@ -73,30 +76,47 @@ export let loader: LoaderFunction = async () => {
 export default function Index() {
   const data = useLoaderData<LoaderData>();
   const { fields } = data;
+  console.dir(fields);
   return (
     <Page>
       <div>
-        <h1>{fields.service}</h1>
+        <h2>Cocktails</h2>
         <ul>
-          {fields.smalls.map((i) => (
+          {fields.cocktails.map((i) => (
             <MenuItem data={i} key={i.sys.id} />
           ))}
         </ul>
-        <br />
-        <ul style={{ marginLeft: "1rem" }}>
-          {fields.skewers.map((i) => (
+        <h2>Drafts</h2>
+        <ul>
+          {fields.drafts.map((i) => (
             <MenuItem data={i} key={i.sys.id} />
           ))}
         </ul>
-        <br />
+        <h2>Can, Bottle</h2>
         <ul>
-          {fields.mains.map((i) => (
+          {fields.cansbottles.map((i) => (
             <MenuItem data={i} key={i.sys.id} />
           ))}
         </ul>
+        <h2>Wine !</h2>
         <ul>
-          {fields.dessert.map((i) => (
-            <MenuItem data={i} key={i.sys.id} />
+          {fields.redWines.map((w) => (
+            <WineItem key={w.sys.id} data={w} />
+          ))}
+        </ul>
+        <ul>
+          {fields.roseWines.map((w) => (
+            <WineItem key={w.sys.id} data={w} />
+          ))}
+        </ul>
+        <ul>
+          {fields.skinContactWines.map((w) => (
+            <WineItem key={w.sys.id} data={w} />
+          ))}
+        </ul>
+        <ul>
+          {fields.sparklingWines.map((w) => (
+            <WineItem key={w.sys.id} data={w} />
           ))}
         </ul>
       </div>

@@ -20,7 +20,11 @@ const Footer = () => (
             justifyContent: "center",
           }}
         >
-          <a href="https://www.instagram.com/chinograndenyc/" target="_blank">
+          <a
+            href="https://www.instagram.com/chinograndenyc/"
+            target="_blank"
+            aria-label="open the chino grande instagram page"
+          >
             <SiInstagram />
           </a>
         </div>

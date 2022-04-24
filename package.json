@@ -9,6 +9,7 @@
     "postinstall": "remix setup node"
   },
   "dependencies": {
+    "@reach/menu-button": "^0.17.0",
     "@remix-run/react": "^1.1.1",
     "@remix-run/serve": "^1.1.1",
     "@remix-run/vercel": "^1.1.1",

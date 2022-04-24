@@ -3,10 +3,10 @@ import React from "react";
 interface Item {
   fields: {
     desc: string;
+    grapes?: string;
     name: string;
     price: string;
-    addOnDesc?: string;
-    addOnPrice?: string;
+    vintage: string;
   };
   sys: {
     id: string;
@@ -34,26 +34,13 @@ const MenuItem = ({ data }: { data: Item }) => {
           }}
         >
           <h3>{data.fields.name}</h3>{" "}
-          {/* <p style={{ marginLeft: "1rem" }}>{data.fields.subName}</p> */}
         </span>
         <p>$ {data.fields.price.replace("$", "")}</p>
       </span>
-      <p style={{ marginLeft: "1rem", width: "330px" }}>{data.fields.desc}</p>
-      {data.fields.addOnDesc && data.fields.addOnPrice ? (
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            marginBottom: "1rem",
-            width: "350px",
-          }}
-        >
-          <p style={{ marginLeft: "1rem" }}>
-            + {data.fields.addOnDesc.replace("+", "")}
-          </p>
-          <p>$ {data.fields?.addOnPrice.replace("$", "")}</p>
-        </div>
-      ) : null}
+      <p style={{ marginLeft: "1rem", width: "330px" }}>
+        {data.fields.desc.replace("'", "")}
+        {data.fields?.grapes?.replace(",", "")}, {data.fields.vintage}
+      </p>
     </li>
   );
 };
