@@ -37,7 +37,7 @@ export default function App() {
           <>
             <script
               async
-              src={`https://www.googletagmanager.com/gtag/js?id=G-94DRQL9KWG`}
+              src="https://www.googletagmanager.com/gtag/js?id=G-94DRQL9KWG"
             />
             <script
               async
