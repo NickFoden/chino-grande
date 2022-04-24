@@ -76,7 +76,6 @@ export let loader: LoaderFunction = async () => {
 export default function Index() {
   const data = useLoaderData<LoaderData>();
   const { fields } = data;
-  console.dir(fields);
   return (
     <Page>
       <div>
