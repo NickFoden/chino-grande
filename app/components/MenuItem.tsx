@@ -5,7 +5,8 @@ interface Item {
     desc: string;
     name: string;
     price: string;
-    subName?: string;
+    addOnDesc?: string;
+    addOnPrice?: string;
   };
   sys: {
     id: string;
@@ -33,9 +34,9 @@ const MenuItem = ({ data }: { data: Item }) => {
           }}
         >
           <h3>{data.fields.name}</h3>{" "}
-          <p style={{ marginLeft: "1rem" }}>{data.fields.subName}</p>
+          {/* <p style={{ marginLeft: "1rem" }}>{data.fields.subName}</p> */}
         </span>
-        <p>{data.fields.price}</p>
+        <p>$ {data.fields.price.replace("$", "")}</p>
       </span>
       <p style={{ marginLeft: "1rem" }}>{data.fields.desc}</p>
     </li>
