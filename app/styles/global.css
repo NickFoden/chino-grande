@@ -8,10 +8,10 @@
 }
 
 .footer {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0;
   display: flex;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
 }
 
 .header_logo {
