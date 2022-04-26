@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { Link } from "remix";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { BsChevronDoubleDown, BsChevronDoubleUp } from "react-icons/bs";
 import useOnClickOutside from "~/hooks/useOnClickOutside";
 
 const Header = () => {
@@ -18,7 +18,7 @@ const Header = () => {
       <Link to="/">
         <img src={"chino-logo-straight.svg"} className="header_logo" />
       </Link>
-      <div ref={bRef}>
+      <div ref={bRef} className="menu_container">
         <button
           aria-expanded={state.mobileMenuOpen ? "true" : "false"}
           aria-label="Toggle Navigation Menu"
@@ -28,9 +28,9 @@ const Header = () => {
           }
         >
           {state.mobileMenuOpen ? (
-            <FaChevronUp size={30} />
+            <BsChevronDoubleUp size={30} />
           ) : (
-            <FaChevronDown size={30} />
+            <BsChevronDoubleDown size={30} />
           )}
           {/* <Menu>
         <MenuButton style={{ border: "none", backgroundColor: "transparent" }}>

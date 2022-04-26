@@ -37,9 +37,11 @@
 }
 
 .header_nav_drop_down {
+  /* display: none; */
   list-style: none;
   margin-top: 2rem;
-  position: absolute;
+  opacity: 0;
+  position: fixed;
   right: 0;
   transform: translateY(-150%);
   -webkit-transform: translateY(-150%);
@@ -54,6 +56,8 @@
 }
 
 .slide-in {
+  display: inline-block;
+  opacity: 1;
   transform: translateY(0);
   -webkit-transform: translateY(0);
 }
