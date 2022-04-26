@@ -80,7 +80,7 @@ const Dinner = () => {
   const { fields } = data;
   return (
     <Page>
-      <div>
+      <div className="dinner_container">
         <h1>{fields.service}</h1>
         <ul className="dinner_ul">
           {fields.smalls.map((i) => (

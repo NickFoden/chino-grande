@@ -1,9 +1,5 @@
-.dinner_ul {
-  padding: 0;
-}
-
 @media (min-width: 600px) {
-  .dinner_container {
+  .drinks_container {
     margin: 0 auto;
     width: 350px;
   }

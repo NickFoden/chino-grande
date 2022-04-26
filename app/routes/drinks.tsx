@@ -4,6 +4,7 @@ import { contentClient } from "~/utils/contentful";
 import Page from "~/components/Page";
 import MenuItem from "~/components/MenuItem";
 import WineItem from "~/components/WineItem";
+import styles from "~/styles/drinks.css";
 
 interface Cocktail {
   fields: {
@@ -66,6 +67,10 @@ type LoaderData = {
   };
 };
 
+export function links() {
+  return [{ rel: "stylesheet", href: styles }];
+}
+
 export let loader: LoaderFunction = async () => {
   const data: LoaderData = await contentClient.getEntry(
     "6gzu0gxzi2UG8zLrkyWmqG"
@@ -78,7 +83,7 @@ const Drinks = () => {
   const { fields } = data;
   return (
     <Page>
-      <div>
+      <div className="drinks_container">
         <h2>Cocktails</h2>
         <ul className="drinks_ul">
           {fields.cocktails.map((i) => (
