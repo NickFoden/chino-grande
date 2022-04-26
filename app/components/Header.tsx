@@ -36,22 +36,6 @@ const Header = () => {
           ) : (
             <BsChevronDoubleDown size={30} />
           )}
-          {/* <Menu>
-        <MenuButton style={{ border: "none", backgroundColor: "transparent" }}>
-          <GiHamburgerMenu size={24} />
-        </MenuButton>
-        <MenuList style={{ backgroundColor: "white" }}>
-          <MenuItem onSelect={() => {}}>
-            <Link to="/dinner">Dinner</Link>
-          </MenuItem>
-          <MenuItem onSelect={() => {}}>
-            <Link to="/tonics">Tonics</Link>
-          </MenuItem>
-          <MenuItem onSelect={() => {}}>
-            <Link to="/drinks">Drinks</Link>
-          </MenuItem>
-        </MenuList>
-      </Menu> */}
         </button>
         <ul
           aria-expanded={state.mobileMenuOpen ? "true" : "false"}

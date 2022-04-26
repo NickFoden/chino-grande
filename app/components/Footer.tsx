@@ -25,7 +25,7 @@ const Footer = () => (
             target="_blank"
             aria-label="open the chino grande instagram page"
           >
-            <SiInstagram />
+            <SiInstagram size={20} />
           </a>
         </div>
       </span>

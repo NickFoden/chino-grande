@@ -73,47 +73,47 @@ export let loader: LoaderFunction = async () => {
   return data;
 };
 
-export default function Index() {
+const Drinks = () => {
   const data = useLoaderData<LoaderData>();
   const { fields } = data;
   return (
     <Page>
       <div>
         <h2>Cocktails</h2>
-        <ul>
+        <ul className="drinks_ul">
           {fields.cocktails.map((i) => (
             <MenuItem data={i} key={i.sys.id} />
           ))}
         </ul>
         <h2>Drafts</h2>
-        <ul>
+        <ul className="drinks_ul">
           {fields.drafts.map((i) => (
             <MenuItem data={i} key={i.sys.id} />
           ))}
         </ul>
         <h2>Can, Bottle</h2>
-        <ul>
+        <ul className="drinks_ul">
           {fields.cansbottles.map((i) => (
             <MenuItem data={i} key={i.sys.id} />
           ))}
         </ul>
         <h2>Wine !</h2>
-        <ul>
+        <ul className="drinks_ul">
           {fields.redWines.map((w) => (
             <WineItem key={w.sys.id} data={w} />
           ))}
         </ul>
-        <ul>
+        <ul className="drinks_ul">
           {fields.roseWines.map((w) => (
             <WineItem key={w.sys.id} data={w} />
           ))}
         </ul>
-        <ul>
+        <ul className="drinks_ul">
           {fields.skinContactWines.map((w) => (
             <WineItem key={w.sys.id} data={w} />
           ))}
         </ul>
-        <ul>
+        <ul className="drinks_ul">
           {fields.sparklingWines.map((w) => (
             <WineItem key={w.sys.id} data={w} />
           ))}
@@ -121,4 +121,6 @@ export default function Index() {
       </div>
     </Page>
   );
-}
+};
+
+export default Drinks;

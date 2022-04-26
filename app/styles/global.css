@@ -16,6 +16,11 @@
   flex-direction: column;
 }
 
+.drinks_ul {
+  list-style: none;
+  padding: 0;
+}
+
 .footer {
   display: flex;
   justify-content: center;
@@ -24,17 +29,17 @@
 }
 
 .header_logo {
-  height: 25px;
+  height: 20px;
   /* margin-left: 2rem; */
 }
 
 .header_nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   max-width: 100vw;
   overflow-x: hidden;
-  padding: 1rem 0;
-  width: 100vw;
+  padding: 1rem;
+  width: 100%;
 }
 
 .header_nav_drop_down {
@@ -49,11 +54,15 @@
   transition: transform 0.4s ease-in-out;
 }
 
+.menu_container {
+  background-color: #fff;
+}
+
 .nav_link {
   background-color: #fff;
   color: #000;
   font-size: 24px;
-  padding: 0.25rem 18px 0.25rem 0.25rem;
+  padding: 0.25rem 18px 0.5rem 0.25rem;
 }
 
 .slide-in {
@@ -71,7 +80,8 @@
 
 .page_container {
   min-height: 85vh;
-  padding: 1rem 4rem;
+  overflow-x: hidden;
+  padding: 1rem;
   z-index: 1;
 }
 
@@ -90,6 +100,16 @@
   text-align: center;
 }
 
+.wine_desc {
+  font-size: 14px;
+  margin-left: 6px;
+  width: 330px;
+}
+
+.wine_grapes {
+  font-style: italic;
+}
+
 @media (min-width: 600px) {
   .footer_row {
     flex-direction: row;
@@ -103,14 +123,11 @@
 
   .header_logo {
     height: 35px;
-  }
-  .header_logo {
-    height: 25px;
     margin-left: 2rem;
   }
 
-  .header_nav {
-    justify-content: space-between;
+  .page_container {
+    padding: 1rem 4rem;
   }
 }
 

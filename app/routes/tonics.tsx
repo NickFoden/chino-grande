@@ -2,7 +2,7 @@ import { useLoaderData } from "remix";
 import type { LoaderFunction } from "remix";
 import { contentClient } from "~/utils/contentful";
 import Page from "~/components/Page";
-import MenuItem from "~/components/MenuItem";
+import styles from "~/styles/tonics.css";
 
 interface Tonic {
   fields: {
@@ -26,25 +26,30 @@ type LoaderData = {
   };
 };
 
-export let loader: LoaderFunction = async () => {
+export function links() {
+  return [{ rel: "stylesheet", href: styles }];
+}
+
+export const loader: LoaderFunction = async () => {
   const data: LoaderData = await contentClient.getEntry(
     "2fHBIQEVe8YrG8BLoWLuxH"
   );
   return data;
 };
 
-export default function Index() {
+const Tonics = () => {
   const data = useLoaderData<LoaderData>();
   const { fields } = data;
   return (
     <Page>
       <div>
         <h1>Tonics</h1>
-
-        <p>{fields.intro}</p>
-        <br />
-        <p>{fields.intro2}</p>
-        <ul style={{ listStyle: "none" }}>
+        <div className="tonics_intro">
+          <p>{fields.intro}</p>
+          <br />
+          <p>{fields.intro2}</p>
+        </div>
+        <ul className="tonics_ul">
           {fields.tonics.map((t, idx) => (
             <li key={t.sys.id}>
               <h5 style={{ fontSize: "18px" }}>
@@ -57,12 +62,9 @@ export default function Index() {
             </li>
           ))}
         </ul>
-        {/* <ul>
-          {fields.smalls.map((i) => (
-            <MenuItem data={i} key={i.sys.id} />
-          ))}
-        </ul> */}
       </div>
     </Page>
   );
-}
+};
+
+export default Tonics;

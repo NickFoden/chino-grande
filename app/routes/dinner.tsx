@@ -3,6 +3,7 @@ import type { LoaderFunction } from "remix";
 import { contentClient } from "~/utils/contentful";
 import Page from "~/components/Page";
 import MenuItem from "~/components/MenuItem";
+import styles from "~/styles/dinner.css";
 
 interface Small {
   fields: {
@@ -63,6 +64,10 @@ type LoaderData = {
   };
 };
 
+export function links() {
+  return [{ rel: "stylesheet", href: styles }];
+}
+
 export let loader: LoaderFunction = async () => {
   const data: LoaderData = await contentClient.getEntry(
     "6SPsrAXZzVDg8i1eqhd5vg"
@@ -70,31 +75,32 @@ export let loader: LoaderFunction = async () => {
   return data;
 };
 
-export default function Index() {
+const Dinner = () => {
   const data = useLoaderData<LoaderData>();
   const { fields } = data;
   return (
     <Page>
       <div>
         <h1>{fields.service}</h1>
-        <ul>
+        <ul className="dinner_ul">
           {fields.smalls.map((i) => (
             <MenuItem data={i} key={i.sys.id} />
           ))}
         </ul>
         <br />
-        <ul style={{ marginLeft: "1rem" }}>
+        <ul className="dinner_ul">
           {fields.skewers.map((i) => (
             <MenuItem data={i} key={i.sys.id} />
           ))}
         </ul>
         <br />
-        <ul>
+        <ul className="dinner_ul">
           {fields.mains.map((i) => (
             <MenuItem data={i} key={i.sys.id} />
           ))}
         </ul>
-        <ul>
+        <br />
+        <ul className="dinner_ul">
           {fields.dessert.map((i) => (
             <MenuItem data={i} key={i.sys.id} />
           ))}
@@ -102,4 +108,6 @@ export default function Index() {
       </div>
     </Page>
   );
-}
+};
+
+export default Dinner;

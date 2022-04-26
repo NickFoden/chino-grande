@@ -37,9 +37,12 @@ const MenuItem = ({ data }: { data: Item }) => {
         </span>
         <p>$ {data.fields.price.replace("$", "")}</p>
       </span>
-      <p style={{ marginLeft: "1rem", width: "330px" }}>
-        {data.fields.desc.replace("'", "")}
-        {data.fields?.grapes?.replace(",", "")}, {data.fields.vintage}
+      <p className="wine_desc">
+        {data.fields.desc.replace("'", "")}{" "}
+        <span className="wine_grapes">
+          {data.fields?.grapes?.replace(",", "")}
+        </span>
+        , {data.fields.vintage}
       </p>
     </li>
   );
