@@ -37,7 +37,7 @@ export default function Index() {
         <h1 style={{ margin: "1rem auto", textAlign: "center" }}>
           {data.fields.introTitle}
         </h1>
-        <h3 className="intro_body">{data.fields?.introBody}</h3>
+        <p className="text-center">{data.fields?.introBody}</p>
       </div>
     </Page>
   );
