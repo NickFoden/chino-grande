@@ -5,6 +5,7 @@
 }
 
 .tonics_intro {
+  font-size: 14px;
   max-width: 720px;
 }
 
@@ -40,6 +41,10 @@
   .tonics_desc,
   .tonics_desc_2 {
     font-size: 14px;
+  }
+
+  .tonics_intro {
+    font-size: 18px;
   }
 
   .tonics_name {

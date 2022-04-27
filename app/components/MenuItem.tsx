@@ -22,8 +22,7 @@ const MenuItem = ({ data }: { data: Item }) => {
       <li className="menu_item_li">
         <h3 className="menu_item_h3">{data?.fields?.name}</h3>&nbsp;
         <p className="menu_item_desc">
-          <>{data.fields?.desc} $</>
-          {data.fields?.price?.replace("$", "")}
+          {data.fields?.desc} $ {data.fields?.price?.replace("$", "")}
         </p>
       </li>
       {data?.fields?.addOnDesc && data?.fields?.addOnPrice ? (

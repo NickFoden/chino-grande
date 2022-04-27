@@ -135,9 +135,11 @@
   align-items: baseline;
   display: flex;
   flex-wrap: wrap;
+  /* overflow-wrap: break-word; */
 }
 
 .menu_item_h3 {
+  display: inline;
   font-size: 13px;
   white-space: nowrap;
 }
@@ -191,6 +193,8 @@
     align-items: baseline;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    /* overflow-wrap: break-word; */
     /* width: 550px; */
   }
 
