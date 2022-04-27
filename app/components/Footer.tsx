@@ -5,7 +5,7 @@ const Footer = () => (
   <footer className="footer">
     <div className="column">
       <div className="footer_row">
-        <p>253 Grand Street &nbsp;</p>
+        <p>253 Grand Street&nbsp;</p>
         <p>Brooklyn, NY 11211</p>
       </div>
       <span className="footer_row">
