@@ -43,7 +43,7 @@ interface Wine {
 
 type LoaderData = {
   fields: {
-    cocktailSectionTitle: string;
+    cocktailsSectionTitle: string;
     cocktails: Cocktail[];
     beerSectionTitle: string;
     drafts: Beer[];
@@ -74,7 +74,7 @@ const Drinks = () => {
   return (
     <Page>
       <div className="drinks_container">
-        <h2 className="drinks_h2">{fields.cocktailSectionTitle}</h2>
+        <h2 className="drinks_h2">{fields.cocktailsSectionTitle}</h2>
         <ul className="drinks_ul">
           {fields.cocktails.map((i) => (
             <MenuItem data={i} key={i.sys.id} />
