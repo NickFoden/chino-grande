@@ -175,8 +175,7 @@
   }
 
   .header_logo {
-    height: 35px;
-    margin-left: 2rem;
+    height: 45px;
   }
 
   .h1_intro {
@@ -227,9 +226,12 @@
   }
 }
 
-/* @media (min-width: 900px) {
+@media (min-width: 800px) {
+  .header_logo {
+    height: 50px;
+  }
 }
-
+/*
 @media (min-width: 1200px) {
 }
 
