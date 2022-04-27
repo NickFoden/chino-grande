@@ -139,7 +139,6 @@
   align-items: baseline;
   display: flex;
   flex-wrap: wrap;
-  /* overflow-wrap: break-word; */
 }
 
 .menu_item_h3 {
@@ -197,12 +196,8 @@
   }
 
   .menu_item_li {
-    align-items: baseline;
-    display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    /* overflow-wrap: break-word; */
-    /* width: 550px; */
+    margin: 5px 0;
   }
 
   .menu_ul_desktop {
@@ -229,6 +224,9 @@
 @media (min-width: 800px) {
   .header_logo {
     height: 50px;
+  }
+  .menu_item_li {
+    margin: 10px 0;
   }
 }
 /*

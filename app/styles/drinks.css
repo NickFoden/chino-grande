@@ -25,7 +25,6 @@
 .wine_item_li {
   align-items: baseline;
   display: flex;
-  /* flex-direction: column; */
   list-style: none;
 }
 
@@ -49,7 +48,13 @@
   .wine_item_h3 {
     font-size: 18px;
   }
-  /* .wine_item_li {
-    flex-direction: row;
-  } */
+  .wine_item_li {
+    margin: 5px 0;
+  }
+}
+
+@media (min-width: 800px) {
+  .wine_item_li {
+    margin: 10px 0;
+  }
 }
