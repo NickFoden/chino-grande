@@ -13,39 +13,18 @@ interface Item {
   };
 }
 
-const MenuItem = ({ data }: { data: Item }) => {
-  return (
-    <li
-      style={{
-        listStyle: "none",
-      }}
-    >
-      <span
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          width: "350px",
-        }}
-      >
-        <span
-          style={{
-            alignItems: "baseline",
-            display: "flex",
-          }}
-        >
-          <h3>{data.fields.name}</h3>{" "}
-        </span>
-        <p>$ {data.fields.price.replace("$", "")}</p>
+const WineItem = ({ data }: { data: Item }) => (
+  <li className="wine_item_li">
+    <h3 className="menu_item_h3">{data.fields.name}</h3>
+    <p className="wine_desc">
+      {data.fields.desc.replace("'", "")}{" "}
+      <span className="wine_grapes">
+        {data.fields?.grapes?.replace(",", "")}
       </span>
-      <p className="wine_desc">
-        {data.fields.desc.replace("'", "")}{" "}
-        <span className="wine_grapes">
-          {data.fields?.grapes?.replace(",", "")}
-        </span>
-        , {data.fields.vintage}
-      </p>
-    </li>
-  );
-};
+      ,&nbsp;{data.fields.vintage}&nbsp;$
+      {data.fields.price.replace("$", "")}
+    </p>
+  </li>
+);
 
-export default MenuItem;
+export default WineItem;

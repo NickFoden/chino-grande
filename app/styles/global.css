@@ -1,5 +1,19 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat-Italic";
+  src: url("/fonts/Montserrat-Italic.ttf") format("ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+
 * {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Montserrat", sans-serif;
 }
 
 .burger {
@@ -58,6 +72,15 @@
   background-color: #fff;
 }
 
+.menu_item_desc {
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+.menu_ul_desktop {
+  display: none;
+}
+
 .nav_link {
   background-color: #fff;
   color: #000;
@@ -81,7 +104,7 @@
 .page_container {
   min-height: 85vh;
   overflow-x: hidden;
-  padding: 1rem;
+  padding: 0.5rem;
   z-index: 1;
 }
 
@@ -96,21 +119,26 @@
   display: none;
 }
 
+.menu_item_li {
+  display: flex;
+  align-items: baseline;
+  /* flex-direction: column; */
+}
+
+.menu_item_h3 {
+  font-size: 13px;
+  white-space: nowrap;
+}
+
 .text-center {
   text-align: center;
 }
 
-.wine_desc {
-  font-size: 14px;
-  margin-left: 6px;
-  width: 330px;
-}
-
-.wine_grapes {
-  font-style: italic;
-}
-
 @media (min-width: 600px) {
+  .burger {
+    display: none;
+  }
+
   .footer_row {
     flex-direction: row;
     text-align: center;
@@ -124,6 +152,35 @@
   .header_logo {
     height: 35px;
     margin-left: 2rem;
+  }
+
+  .menu_item_desc {
+    font-size: 14px;
+    margin-left: 4px;
+  }
+
+  .menu_item_h3 {
+    font-size: 18px;
+  }
+
+  .menu_item_li {
+    align-items: baseline;
+    display: flex;
+    flex-direction: row;
+    /* width: 550px; */
+  }
+
+  .menu_ul_desktop {
+    display: flex;
+    list-style: none;
+  }
+
+  .nav_link_desktop {
+    background-color: #fff;
+    color: #000;
+    font-size: 24px;
+    padding: 0.25rem 18px 0.5rem 0.25rem;
+    text-decoration: none;
   }
 
   .page_container {

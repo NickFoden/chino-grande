@@ -1,6 +1,51 @@
+.drinks_container {
+  margin: 0 auto;
+  max-width: 95vw;
+  width: 100%;
+}
+
+.drinks_h2 {
+  font-size: 20px;
+}
+
+.wine_desc {
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+.wine_grapes {
+  font-style: italic;
+}
+
+.wine_item_h3 {
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.wine_item_li {
+  align-items: baseline;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
 @media (min-width: 600px) {
   .drinks_container {
     margin: 0 auto;
-    width: 350px;
+    max-width: 800px;
+    width: 100%;
+  }
+  .drinks_h2 {
+    font-size: 24px;
+  }
+  .wine_desc {
+    font-size: 14px;
+    margin-left: 6px;
+  }
+  .wine_item_h3 {
+    font-size: 18px;
+  }
+  .wine_item_li {
+    flex-direction: row;
   }
 }

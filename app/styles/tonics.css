@@ -1,3 +1,9 @@
+.tonics_container {
+  margin: 0 auto;
+  max-width: 95vw;
+  width: 100%;
+}
+
 .tonics_intro {
   max-width: 720px;
 }
@@ -5,4 +11,12 @@
 .tonics_ul {
   list-style: none;
   padding: 0;
+}
+
+@media (min-width: 600px) {
+  .tonics_container {
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+  }
 }

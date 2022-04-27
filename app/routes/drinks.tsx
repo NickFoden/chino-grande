@@ -84,25 +84,25 @@ const Drinks = () => {
   return (
     <Page>
       <div className="drinks_container">
-        <h2>Cocktails</h2>
+        <h2 className="drinks_h2">Cocktails</h2>
         <ul className="drinks_ul">
           {fields.cocktails.map((i) => (
             <MenuItem data={i} key={i.sys.id} />
           ))}
         </ul>
-        <h2>Drafts</h2>
+        <h2 className="drinks_h2">Drafts</h2>
         <ul className="drinks_ul">
           {fields.drafts.map((i) => (
             <MenuItem data={i} key={i.sys.id} />
           ))}
         </ul>
-        <h2>Can, Bottle</h2>
+        <h2 className="drinks_h2">Can, Bottle</h2>
         <ul className="drinks_ul">
           {fields.cansbottles.map((i) => (
             <MenuItem data={i} key={i.sys.id} />
           ))}
         </ul>
-        <h2>Wine !</h2>
+        <h2 className="drinks_h2">Wine !</h2>
         <ul className="drinks_ul">
           {fields.redWines.map((w) => (
             <WineItem key={w.sys.id} data={w} />

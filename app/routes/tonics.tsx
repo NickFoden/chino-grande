@@ -42,7 +42,7 @@ const Tonics = () => {
   const { fields } = data;
   return (
     <Page>
-      <div>
+      <div className="tonics_container">
         <h1>Tonics</h1>
         <div className="tonics_intro">
           <p>{fields.intro}</p>

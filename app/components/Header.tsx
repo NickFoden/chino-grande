@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { Link } from "remix";
+import { NavLink } from "@remix-run/react";
 import { BsChevronDoubleDown, BsChevronDoubleUp } from "react-icons/bs";
 import useOnClickOutside from "~/hooks/useOnClickOutside";
 
@@ -12,6 +13,10 @@ const Header = () => {
   };
 
   useOnClickOutside(bRef, closeMenu);
+
+  const activeStyle = {
+    textDecoration: "underline",
+  };
 
   return (
     <nav className="header_nav">
@@ -49,17 +54,46 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link to="/tonics" className="nav_link">
-              Tonics
-            </Link>
-          </li>
-          <li>
             <Link to="/drinks" className="nav_link">
               Drinks
             </Link>
           </li>
+          <li>
+            <Link to="/tonics" className="nav_link">
+              Tonics
+            </Link>
+          </li>
         </ul>
       </div>
+      <ul className="menu_ul_desktop">
+        <li>
+          <NavLink
+            to="/dinner"
+            style={({ isActive }) => (isActive ? activeStyle : {})}
+            className="nav_link_desktop"
+          >
+            Dinner
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/drinks"
+            className="nav_link_desktop"
+            style={({ isActive }) => (isActive ? activeStyle : {})}
+          >
+            Drinks
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/tonics"
+            className="nav_link_desktop"
+            style={({ isActive }) => (isActive ? activeStyle : {})}
+          >
+            Tonics
+          </NavLink>
+        </li>
+      </ul>
     </nav>
   );
 };
