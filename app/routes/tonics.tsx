@@ -50,15 +50,17 @@ const Tonics = () => {
           <p>{fields.intro2}</p>
         </div>
         <ul className="tonics_ul">
-          {fields.tonics.map((t, idx) => (
+          {fields.tonics.map((t) => (
             <li key={t.sys.id}>
-              <h5 style={{ fontSize: "18px" }}>
-                #{idx + 1}: {t.fields.name}
+              <h5 style={{ fontSize: "16px", margin: "1rem 0 0.5rem" }}>
+                {t.fields.name}
               </h5>
-              <ul>
-                <li>{t.fields.desc}</li>
-                <li>{t.fields.desc2}</li>
-              </ul>
+              <p style={{ marginLeft: "1rem" }}>
+                <span style={{ fontStyle: "italic", marginRight: "0.2rem" }}>
+                  {t.fields.desc}
+                </span>
+                {t.fields.desc2}
+              </p>
             </li>
           ))}
         </ul>

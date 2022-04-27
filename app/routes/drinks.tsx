@@ -17,18 +17,7 @@ interface Cocktail {
   };
 }
 
-interface CanBottle {
-  fields: {
-    desc: string;
-    name: string;
-    price: string;
-  };
-  sys: {
-    id: string;
-  };
-}
-
-interface Draft {
+interface Beer {
   fields: {
     desc: string;
     name: string;
@@ -54,13 +43,12 @@ interface Wine {
 
 type LoaderData = {
   fields: {
-    cansbottles: CanBottle[];
+    cocktailSectionTitle: string;
     cocktails: Cocktail[];
-    drafts: Draft[];
-    redWines: Wine[];
-    roseWines: Wine[];
-    skinContactWines: Wine[];
-    sparklingWines: Wine[];
+    beerSectionTitle: string;
+    drafts: Beer[];
+    wineSectionTitle: string;
+    wine: Wine[];
   };
   sys: {
     id: string;
@@ -81,45 +69,26 @@ export let loader: LoaderFunction = async () => {
 const Drinks = () => {
   const data = useLoaderData<LoaderData>();
   const { fields } = data;
+  console.dir(fields);
+
   return (
     <Page>
       <div className="drinks_container">
-        <h2 className="drinks_h2">Cocktails</h2>
+        <h2 className="drinks_h2">{fields.cocktailSectionTitle}</h2>
         <ul className="drinks_ul">
           {fields.cocktails.map((i) => (
             <MenuItem data={i} key={i.sys.id} />
           ))}
         </ul>
-        <h2 className="drinks_h2">Drafts</h2>
+        <h2 className="drinks_h2">{fields.beerSectionTitle}</h2>
         <ul className="drinks_ul">
           {fields.drafts.map((i) => (
             <MenuItem data={i} key={i.sys.id} />
           ))}
         </ul>
-        <h2 className="drinks_h2">Can, Bottle</h2>
+        <h2 className="drinks_h2">{fields.wineSectionTitle}</h2>
         <ul className="drinks_ul">
-          {fields.cansbottles.map((i) => (
-            <MenuItem data={i} key={i.sys.id} />
-          ))}
-        </ul>
-        <h2 className="drinks_h2">Wine !</h2>
-        <ul className="drinks_ul">
-          {fields.redWines.map((w) => (
-            <WineItem key={w.sys.id} data={w} />
-          ))}
-        </ul>
-        <ul className="drinks_ul">
-          {fields.roseWines.map((w) => (
-            <WineItem key={w.sys.id} data={w} />
-          ))}
-        </ul>
-        <ul className="drinks_ul">
-          {fields.skinContactWines.map((w) => (
-            <WineItem key={w.sys.id} data={w} />
-          ))}
-        </ul>
-        <ul className="drinks_ul">
-          {fields.sparklingWines.map((w) => (
+          {fields.wine.map((w) => (
             <WineItem key={w.sys.id} data={w} />
           ))}
         </ul>

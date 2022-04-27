@@ -12,22 +12,6 @@ const Footer = () => (
         <a href="mailto:info@chinograndenyc.com">info@chinograndenyc.com</a>
         <span className="footer_space">&nbsp;-&nbsp;</span>{" "}
         <a href="tel:19179090466">917 909-0466</a>
-        <span className="footer_space">&nbsp;-&nbsp;</span>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <a
-            href="https://www.instagram.com/chinograndenyc/"
-            target="_blank"
-            aria-label="open the chino grande instagram page"
-          >
-            <SiInstagram size={20} />
-          </a>
-        </div>
       </span>
     </div>
   </footer>
