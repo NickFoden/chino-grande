@@ -33,6 +33,9 @@ export default function Index() {
         <h1 style={{ margin: "1rem auto", textAlign: "center" }}>
           {data.fields.introTitle}
         </h1>
+        <h3 style={{ margin: "1rem auto", textAlign: "center" }}>
+          {data.fields?.introBody}
+        </h3>
         <p className="text-center">
           a cozy neighborhood restaurant and karaoke saloon
         </p>
