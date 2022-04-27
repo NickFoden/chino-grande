@@ -27,6 +27,9 @@ export const meta: MetaFunction = () => {
     "og:title": "Chino Grande",
     "og:type": "website",
     "og:url": "https://chinograndenyc.com/",
+    "twitter:description": "A cozy neighborhood restaurant and karaoke saloon.",
+    "twitter:image": "https://chinograndenyc.com/chino-logo-straight.svg",
+    "twitter:title": "Chino Grande",
   };
 };
 
