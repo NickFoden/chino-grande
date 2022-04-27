@@ -9,6 +9,7 @@ interface Tonic {
     desc: string;
     desc2: string;
     name: string;
+    price: string;
   };
   sys: {
     id: string;
@@ -52,14 +53,16 @@ const Tonics = () => {
         <ul className="tonics_ul">
           {fields.tonics.map((t) => (
             <li key={t.sys.id}>
-              <h5 style={{ fontSize: "16px", margin: "1rem 0 0.5rem" }}>
-                {t.fields.name}
-              </h5>
-              <p style={{ marginLeft: "1rem" }}>
-                <span style={{ fontStyle: "italic", marginRight: "0.2rem" }}>
+              <span style={{ display: "flex" }}>
+                <h5 style={{ fontSize: "16px", margin: "1rem 0 0.5rem" }}>
+                  {t.fields.name}
+                </h5>
+                <p style={{ fontStyle: "italic", marginRight: "0.2rem" }}>
                   {t.fields.desc}
-                </span>
-                {t.fields.desc2}
+                </p>
+              </span>
+              <p style={{ marginLeft: "1rem" }}>
+                {t.fields.desc2}$ {t.fields.price.replace("$", "")}
               </p>
             </li>
           ))}

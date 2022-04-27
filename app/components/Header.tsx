@@ -35,7 +35,7 @@ const Header = () => {
               style={({ isActive }) => (isActive ? activeStyle : {})}
               className="nav_link_desktop"
             >
-              Dinner
+              Food
             </NavLink>
           </li>
           <li>
@@ -81,7 +81,7 @@ const Header = () => {
         >
           <li>
             <Link to="/dinner" className="nav_link">
-              Dinner
+              Food
             </Link>
           </li>
           <li>
