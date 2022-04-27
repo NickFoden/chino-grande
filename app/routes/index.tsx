@@ -30,15 +30,14 @@ export default function Index() {
             <img src={"look_back_ac-bu.png"} alt="driver looking back" />
           </a>
         </div>
-        <h1 style={{ margin: "1rem auto", textAlign: "center" }}>
-          {data.fields.introTitle}
-        </h1>
-        <h3 style={{ margin: "1rem auto", textAlign: "center" }}>
-          {data.fields?.introBody}
-        </h3>
+        <br />
         <p className="text-center">
           a cozy neighborhood restaurant and karaoke saloon
         </p>
+        <h1 style={{ margin: "1rem auto", textAlign: "center" }}>
+          {data.fields.introTitle}
+        </h1>
+        <h3 className="intro_body">{data.fields?.introBody}</h3>
       </div>
     </Page>
   );

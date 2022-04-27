@@ -15,15 +15,22 @@ interface Item {
 
 const WineItem = ({ data }: { data: Item }) => (
   <li className="wine_item_li">
-    <h3 className="menu_item_h3">{data.fields.name}</h3>
-    <p className="wine_desc">
-      {data.fields.desc.replace("'", "")}{" "}
-      <span className="wine_grapes">
-        {data.fields?.grapes?.replace(",", "")}
-      </span>
-      ,&nbsp;{data.fields.vintage}&nbsp;$
-      {data.fields.price.replace("$", "")}
-    </p>
+    <span style={{ marginLeft: "10px" }}>
+      <h3
+        className="menu_item_h3"
+        style={{ display: "inline", marginLeft: "-10px" }}
+      >
+        {data.fields.name}
+      </h3>
+      <p className="wine_desc" style={{ display: "inline" }}>
+        {data.fields.desc.replace("'", "")}{" "}
+        <span className="wine_grapes">
+          {data.fields?.grapes?.replace(",", "")}
+        </span>
+        ,&nbsp;{data.fields.vintage}&nbsp;$
+        {data.fields.price.replace("$", "")}
+      </p>
+    </span>
   </li>
 );
 
