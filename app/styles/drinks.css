@@ -38,6 +38,10 @@
   .drinks_h2 {
     font-size: 24px;
   }
+  .tonics_name {
+    font-size: 16px;
+    margin: 1rem 0 0.5rem;
+  }
   .wine_desc {
     font-size: 14px;
     margin-left: 6px;
