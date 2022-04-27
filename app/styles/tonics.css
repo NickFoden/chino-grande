@@ -1,0 +1,53 @@
+.tonics_container {
+  margin: 0 auto;
+  max-width: 95vw;
+  width: 100%;
+}
+
+.tonics_intro {
+  font-size: 14px;
+  max-width: 720px;
+}
+
+.tonics_desc {
+  font-style: italic;
+  font-size: 12px;
+}
+
+.tonics_desc_2 {
+  margin-left: 1rem;
+  font-size: 12px;
+}
+
+.tonics_name {
+  font-size: 13px;
+  margin: 1rem 0 0.5rem;
+  white-space: nowrap;
+}
+
+.tonics_ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 600px) {
+  .tonics_container {
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+  }
+
+  .tonics_desc,
+  .tonics_desc_2 {
+    font-size: 14px;
+  }
+
+  .tonics_intro {
+    font-size: 18px;
+  }
+
+  .tonics_name {
+    font-size: 16px;
+  }
+}

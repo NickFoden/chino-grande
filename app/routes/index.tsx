@@ -6,6 +6,7 @@ import Page from "~/components/Page";
 type LoaderData = {
   fields: {
     introBody?: string;
+    introMotto?: string;
     introTitle: string;
   };
   sys: {
@@ -30,12 +31,12 @@ export default function Index() {
             <img src={"look_back_ac-bu.png"} alt="driver looking back" />
           </a>
         </div>
+        <br />
+        <p className="text-center">{data.fields?.introMotto}</p>
         <h1 style={{ margin: "1rem auto", textAlign: "center" }}>
           {data.fields.introTitle}
         </h1>
-        <p className="text-center">
-          a cozy neighborhood restaurant and karaoke saloon
-        </p>
+        <p className="text-center">{data.fields?.introBody}</p>
       </div>
     </Page>
   );

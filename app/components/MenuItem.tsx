@@ -14,32 +14,42 @@ interface Item {
 }
 
 const MenuItem = ({ data }: { data: Item }) => {
+  if (!data.fields || !data.fields.name) {
+    return null;
+  }
   return (
-    <li
-      style={{
-        listStyle: "none",
-      }}
-    >
-      <span
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          width: "350px",
-        }}
-      >
-        <span
-          style={{
-            alignItems: "baseline",
-            display: "flex",
-          }}
-        >
-          <h3>{data.fields.name}</h3>{" "}
-          {/* <p style={{ marginLeft: "1rem" }}>{data.fields.subName}</p> */}
+    <>
+      <li className="menu_item_li">
+        <span style={{ marginLeft: "10px" }}>
+          <h3
+            className="menu_item_h3"
+            style={{ display: "inline", marginLeft: "-10px" }}
+          >
+            {data?.fields?.name}
+          </h3>
+          &nbsp;
+          <p className="menu_item_desc" style={{ display: "inline" }}>
+            {data.fields?.desc}{" "}
+            <span style={{ whiteSpace: "nowrap" }}>
+              {`$${data.fields?.price?.replace("$", "")}`}
+            </span>
+          </p>
         </span>
-        <p>$ {data.fields.price.replace("$", "")}</p>
-      </span>
-      <p style={{ marginLeft: "1rem" }}>{data.fields.desc}</p>
-    </li>
+      </li>
+      {data?.fields?.addOnDesc && data?.fields?.addOnPrice ? (
+        <li className="menu_item_li">
+          <span style={{ marginLeft: "10px" }}>
+            <p
+              className="menu_item_desc"
+              style={{ display: "inline", marginLeft: "-10px" }}
+            >
+              &nbsp;+ {data.fields?.addOnDesc.replace("+", "")}&nbsp;$
+              {data.fields?.addOnPrice.replace("$", "")}
+            </p>
+          </span>
+        </li>
+      ) : null}
+    </>
   );
 };
 

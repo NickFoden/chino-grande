@@ -3,22 +3,10 @@ import type { LoaderFunction } from "remix";
 import { contentClient } from "~/utils/contentful";
 import Page from "~/components/Page";
 import MenuItem from "~/components/MenuItem";
-import styles from "~/styles/dinner.css";
+import WineItem from "~/components/WineItem";
+import styles from "~/styles/drinks.css";
 
-interface Small {
-  fields: {
-    addOnDesc: string;
-    addOnPrice: string;
-    desc: string;
-    name: string;
-    price: string;
-  };
-  sys: {
-    id: string;
-  };
-}
-
-interface Skewer {
+interface Cocktail {
   fields: {
     desc: string;
     name: string;
@@ -29,7 +17,7 @@ interface Skewer {
   };
 }
 
-interface Main {
+interface Beer {
   fields: {
     desc: string;
     name: string;
@@ -40,11 +28,13 @@ interface Main {
   };
 }
 
-interface Dessert {
+interface Wine {
   fields: {
     desc: string;
+    grapes?: string;
     name: string;
     price: string;
+    vintage: string;
   };
   sys: {
     id: string;
@@ -53,12 +43,12 @@ interface Dessert {
 
 type LoaderData = {
   fields: {
-    sectionTitle: string;
-    dessert: Dessert[];
-    mains: Main[];
-    service: string;
-    skewers: Skewer[];
-    smalls: Small[];
+    cocktailsSectionTitle: string;
+    cocktails: Cocktail[];
+    beerSectionTitle: string;
+    drafts: Beer[];
+    wineSectionTitle: string;
+    wine: Wine[];
   };
   sys: {
     id: string;
@@ -71,39 +61,35 @@ export function links() {
 
 export let loader: LoaderFunction = async () => {
   const data: LoaderData = await contentClient.getEntry(
-    "6SPsrAXZzVDg8i1eqhd5vg"
+    "6gzu0gxzi2UG8zLrkyWmqG"
   );
   return data;
 };
 
-const Dinner = () => {
+const Drinks = () => {
   const data = useLoaderData<LoaderData>();
   const { fields } = data;
+  console.dir(fields);
+
   return (
     <Page>
-      <div className="dinner_container">
-        <h1 className="h1_intro">{fields.sectionTitle}</h1>
-        <ul className="dinner_ul">
-          {fields.smalls.map((i) => (
+      <div className="drinks_container">
+        <h2 className="drinks_h2">{fields.cocktailsSectionTitle}</h2>
+        <ul className="drinks_ul">
+          {fields.cocktails.map((i) => (
             <MenuItem data={i} key={i.sys.id} />
           ))}
         </ul>
-        <div className="dinner_spacer" />
-        <ul className="dinner_ul">
-          {fields.skewers.map((i) => (
+        <h2 className="drinks_h2">{fields.beerSectionTitle}</h2>
+        <ul className="drinks_ul">
+          {fields.drafts.map((i) => (
             <MenuItem data={i} key={i.sys.id} />
           ))}
         </ul>
-        <div className="dinner_spacer" />
-        <ul className="dinner_ul">
-          {fields.mains.map((i) => (
-            <MenuItem data={i} key={i.sys.id} />
-          ))}
-        </ul>
-        <div className="dinner_spacer" />
-        <ul className="dinner_ul">
-          {fields.dessert.map((i) => (
-            <MenuItem data={i} key={i.sys.id} />
+        <h2 className="drinks_h2">{fields.wineSectionTitle}</h2>
+        <ul className="drinks_ul">
+          {fields.wine.map((w) => (
+            <WineItem key={w.sys.id} data={w} />
           ))}
         </ul>
       </div>
@@ -111,4 +97,4 @@ const Dinner = () => {
   );
 };
 
-export default Dinner;
+export default Drinks;
