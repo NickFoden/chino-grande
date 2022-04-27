@@ -1,7 +1,11 @@
 .dinner_ul {
   list-style: none;
-  margin: 0.5rem 0;
+  margin: 0;
   padding: 0;
+}
+
+.dinner_spacer {
+  height: 10px;
 }
 
 .dinner_container {

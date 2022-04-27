@@ -87,19 +87,19 @@ const Dinner = () => {
             <MenuItem data={i} key={i.sys.id} />
           ))}
         </ul>
-        <br />
+        <div className="dinner_spacer" />
         <ul className="dinner_ul">
           {fields.skewers.map((i) => (
             <MenuItem data={i} key={i.sys.id} />
           ))}
         </ul>
-        <br />
+        <div className="dinner_spacer" />
         <ul className="dinner_ul">
           {fields.mains.map((i) => (
             <MenuItem data={i} key={i.sys.id} />
           ))}
         </ul>
-        <br />
+        <div className="dinner_spacer" />
         <ul className="dinner_ul">
           {fields.dessert.map((i) => (
             <MenuItem data={i} key={i.sys.id} />

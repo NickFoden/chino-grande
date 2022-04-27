@@ -20,13 +20,44 @@ const Header = () => {
 
   return (
     <nav className="header_nav">
-      <Link to="/">
-        <img
-          src={"chino-logo-straight.svg"}
-          className="header_logo"
-          alt="Chino Grande"
-        />
-      </Link>
+      <div className="header_desktop_nav">
+        <Link to="/">
+          <img
+            src={"chino-logo-straight.svg"}
+            className="header_logo"
+            alt="Chino Grande"
+          />
+        </Link>
+        <ul className="menu_ul_desktop">
+          <li>
+            <NavLink
+              to="/dinner"
+              style={({ isActive }) => (isActive ? activeStyle : {})}
+              className="nav_link_desktop"
+            >
+              Dinner
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/drinks"
+              className="nav_link_desktop"
+              style={({ isActive }) => (isActive ? activeStyle : {})}
+            >
+              Drinks
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/tonics"
+              className="nav_link_desktop"
+              style={({ isActive }) => (isActive ? activeStyle : {})}
+            >
+              Tonics
+            </NavLink>
+          </li>
+        </ul>
+      </div>
       <div ref={bRef} className="menu_container">
         <button
           aria-expanded={state.mobileMenuOpen ? "true" : "false"}
@@ -65,35 +96,6 @@ const Header = () => {
           </li>
         </ul>
       </div>
-      <ul className="menu_ul_desktop">
-        <li>
-          <NavLink
-            to="/dinner"
-            style={({ isActive }) => (isActive ? activeStyle : {})}
-            className="nav_link_desktop"
-          >
-            Dinner
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/drinks"
-            className="nav_link_desktop"
-            style={({ isActive }) => (isActive ? activeStyle : {})}
-          >
-            Drinks
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/tonics"
-            className="nav_link_desktop"
-            style={({ isActive }) => (isActive ? activeStyle : {})}
-          >
-            Tonics
-          </NavLink>
-        </li>
-      </ul>
     </nav>
   );
 };
