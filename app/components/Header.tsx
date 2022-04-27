@@ -68,9 +68,9 @@ const Header = () => {
           }
         >
           {state.mobileMenuOpen ? (
-            <BsChevronDoubleUp size={30} />
+            <BsChevronDoubleUp size={30} color="black" />
           ) : (
-            <BsChevronDoubleDown size={30} />
+            <BsChevronDoubleDown size={30} color="black" />
           )}
         </button>
         <ul
