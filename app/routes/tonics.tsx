@@ -53,16 +53,17 @@ const Tonics = () => {
         <ul className="tonics_ul">
           {fields.tonics.map((t) => (
             <li key={t.sys.id}>
-              <span style={{ display: "flex" }}>
+              <span style={{ display: "flex", alignItems: "baseline" }}>
                 <h5 style={{ fontSize: "16px", margin: "1rem 0 0.5rem" }}>
                   {t.fields.name}
-                </h5>
+                </h5>{" "}
+                &nbsp;
                 <p style={{ fontStyle: "italic", marginRight: "0.2rem" }}>
                   {t.fields.desc}
                 </p>
               </span>
               <p style={{ marginLeft: "1rem" }}>
-                {t.fields.desc2}$ {t.fields.price.replace("$", "")}
+                {t.fields.desc2} &nbsp;$ {t.fields.price.replace("$", "")}
               </p>
             </li>
           ))}
