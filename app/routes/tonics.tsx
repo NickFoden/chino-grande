@@ -44,7 +44,7 @@ const Tonics = () => {
   return (
     <Page>
       <div className="tonics_container">
-        <h1>Tonics</h1>
+        <h1 className="h1_intro">Tonics</h1>
         <div className="tonics_intro">
           <p>{fields.intro}</p>
           <br />

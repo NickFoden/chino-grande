@@ -82,7 +82,7 @@ const Dinner = () => {
   return (
     <Page>
       <div className="dinner_container">
-        <h1>{fields.sectionTitle}</h1>
+        <h1 className="h1_intro">{fields.sectionTitle}</h1>
         <ul className="dinner_ul">
           {fields.smalls.map((i) => (
             <MenuItem data={i} key={i.sys.id} />
