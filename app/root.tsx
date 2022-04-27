@@ -20,7 +20,11 @@ export function links() {
 }
 
 export const meta: MetaFunction = () => {
-  return { title: "Chino Grande" };
+  return {
+    title: "Chino Grande",
+    description: "A cozy neighborhood restaurant and karaoke saloon.",
+    "og:image": "/chino-logo-straight.svg",
+  };
 };
 
 export default function App() {
