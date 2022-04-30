@@ -56,6 +56,24 @@ const Header = () => {
               Tonics
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to="/karaoke"
+              className="nav_link_desktop"
+              style={({ isActive }) => (isActive ? activeStyle : {})}
+            >
+              Karaoke
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/reservations"
+              className="nav_link_desktop"
+              style={({ isActive }) => (isActive ? activeStyle : {})}
+            >
+              Reservations
+            </NavLink>
+          </li>
         </ul>
       </div>
       <div ref={bRef} className="menu_container">
@@ -92,6 +110,16 @@ const Header = () => {
           <li>
             <Link to="/tonics" className="nav_link">
               Tonics
+            </Link>
+          </li>
+          <li>
+            <Link to="/karaoke" className="nav_link">
+              Karaoke
+            </Link>
+          </li>
+          <li>
+            <Link to="/reservations" className="nav_link">
+              Reservations
             </Link>
           </li>
         </ul>

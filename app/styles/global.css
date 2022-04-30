@@ -71,6 +71,7 @@
 
 .header_nav_drop_down {
   /* display: none; */
+  background-color: #fff;
   border-radius: 2px;
   list-style: none;
   margin-top: 2rem;
@@ -101,7 +102,9 @@
   background-color: #fff;
   color: #000;
   font-size: 24px;
+  min-width: 170px;
   padding: 0.25rem 18px 0.5rem 0.25rem;
+  width: 100%;
 }
 
 .slide-in {
