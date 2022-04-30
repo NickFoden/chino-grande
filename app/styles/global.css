@@ -80,7 +80,7 @@
   list-style: none;
   margin-top: 2rem;
   opacity: 0;
-  padding: 0 0 0 2rem;
+  padding: 0 0 1rem 2rem;
   position: fixed;
   right: 0;
   transform: translateY(-150%);
