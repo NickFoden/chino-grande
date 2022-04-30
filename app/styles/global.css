@@ -16,6 +16,10 @@
   font-family: "Montserrat", sans-serif;
 }
 
+.blue_links {
+  color: #6495ed;
+}
+
 .burger {
   background-color: transparent;
   border: 1px solid transparent;

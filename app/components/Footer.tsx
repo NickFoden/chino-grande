@@ -9,9 +9,13 @@ const Footer = () => (
         <p>Brooklyn, NY 11211</p>
       </div>
       <span className="footer_row">
-        <a href="mailto:info@chinograndenyc.com">info@chinograndenyc.com</a>
+        <a className="blue_links" href="mailto:info@chinograndenyc.com">
+          info@chinograndenyc.com
+        </a>
         <span className="footer_space">&nbsp;-&nbsp;</span>{" "}
-        <a href="tel:19179090466">917 909-0466</a>
+        <a className="blue_links" href="tel:19179090466">
+          917 909-0466
+        </a>
       </span>
     </div>
   </footer>
