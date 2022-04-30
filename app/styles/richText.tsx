@@ -14,12 +14,11 @@ export const options = {
     ) => (
       <p
         style={{
-          fontSize: "1rem",
+          fontSize: "14px",
           lineHeight: "1.1",
-          textTransform: "lowercase",
           marginBottom: "1rem",
           maxWidth: "90vw",
-          width: "900px",
+          width: "800px;",
         }}
       >
         {children}
@@ -40,7 +39,7 @@ export const options = {
           href={node.data.uri}
           target="_blank"
           rel="noopener noreferrer"
-          style={{ color: "black", fontSize: "1rem", marginTop: "2rem" }}
+          style={{ color: "#6495ED", fontSize: "14px", marginTop: "2rem" }}
         >
           {children}
         </a>
