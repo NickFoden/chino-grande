@@ -1,0 +1,13 @@
+.reservations_container {
+  margin: 0 auto;
+  max-width: 95vw;
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .reservations_container {
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+  }
+}
