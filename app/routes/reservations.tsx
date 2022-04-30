@@ -29,12 +29,10 @@ export let loader: LoaderFunction = async () => {
 
 export default function Reservations() {
   const data = useLoaderData<LoaderData>();
-  console.dir(data);
   return (
     <Page>
       <div className="reservations_container">
         <h1 className="h1_intro">{data.fields?.title}</h1>
-        <br />
         <div>{documentToReactComponents(data.fields.body, options)}</div>
       </div>
     </Page>
