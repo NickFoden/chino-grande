@@ -94,31 +94,31 @@ const Header = () => {
         <ul
           aria-expanded={state.mobileMenuOpen ? "true" : "false"}
           className={`header_nav_drop_down ${
-            state.mobileMenuOpen ? "slide-in" : ""
+            state.mobileMenuOpen ? "slide-in" : "slide-out"
           }`}
         >
           <li>
-            <Link to="/dinner" className="nav_link">
+            <Link to="/dinner" className="nav_link" onClick={closeMenu}>
               Food
             </Link>
           </li>
           <li>
-            <Link to="/drinks" className="nav_link">
+            <Link to="/drinks" className="nav_link" onClick={closeMenu}>
               Drinks
             </Link>
           </li>
           <li>
-            <Link to="/tonics" className="nav_link">
+            <Link to="/tonics" className="nav_link" onClick={closeMenu}>
               Tonics
             </Link>
           </li>
           <li>
-            <Link to="/karaoke" className="nav_link">
+            <Link to="/karaoke" className="nav_link" onClick={closeMenu}>
               Karaoke
             </Link>
           </li>
           <li>
-            <Link to="/reservations" className="nav_link">
+            <Link to="/reservations" className="nav_link" onClick={closeMenu}>
               Reservations
             </Link>
           </li>

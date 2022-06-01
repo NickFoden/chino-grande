@@ -40,6 +40,7 @@
 }
 .h1_intro {
   font-size: 20px;
+  margin: 8px 0;
 }
 .intro_body {
   font-size: 14px;
@@ -79,13 +80,10 @@
   border-radius: 2px;
   list-style: none;
   margin-top: 2rem;
-  opacity: 0;
   padding: 0 0 1rem 2rem;
   position: fixed;
   right: 0;
-  transform: translateY(-150%);
-  -webkit-transform: translateY(-150%);
-  transition: transform 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .menu_container {
@@ -116,6 +114,13 @@
   opacity: 1;
   transform: translateY(0);
   -webkit-transform: translateY(0);
+}
+
+.slide-out {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-150%);
+  -webkit-transform: translateY(-150%);
 }
 
 .home_img {
@@ -186,7 +191,7 @@
 
   .h1_intro {
     font-size: 24px;
-    margin-bottom: 16px;
+    margin: 8px 0 16px 0;
   }
 
   .intro_body {
