@@ -28,7 +28,7 @@ export default function Index() {
       <div>
         <div className="home_img">
           <img
-            src="/Lobster-1024.png"
+            src="/Lobster-680.png"
             srcSet="Lobster-680.png 1x, Lobster-1024.png 2x,"
             alt="side view lobster and fries"
           />
