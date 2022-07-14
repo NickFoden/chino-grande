@@ -27,9 +27,14 @@ export default function Index() {
     <Page>
       <div>
         <div className="home_img">
-          <a href="https://www.youtube.com/watch?v=ACEBZ-KmuQo" target="_blank">
-            <img src={"look_back_ac-bu.png"} alt="driver looking back" />
-          </a>
+          <img
+            src="/Lobster-1024.png"
+            srcSet="Lobster-680.png 1x, Lobster-1024.png 2x,"
+            alt="side view lobster and fries"
+          />
+          {/* <a href="https://www.youtube.com/watch?v=ACEBZ-KmuQo" target="_blank">
+            <img src="/look_back_ac-bu.png" alt="driver looking back" />
+          </a> */}
         </div>
         <br />
         <p className="text-center">{data.fields?.introMotto}</p>

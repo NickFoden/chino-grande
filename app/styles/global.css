@@ -125,6 +125,7 @@
 .home_img {
   max-width: 90vw;
   margin: 2rem auto 0;
+  min-height: 200px;
   width: 400px;
 }
 
@@ -191,6 +192,11 @@
   .h1_intro {
     font-size: 24px;
     margin: 8px 0 16px 0;
+  }
+
+  .home_img {
+    min-height: 300px;
+    width: 450px;
   }
 
   .intro_body {
