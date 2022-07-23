@@ -76,7 +76,7 @@ const Header = () => {
           </li>
         </ul>
       </div>
-      <div ref={bRef} className="menu_container">
+      {/* <div ref={bRef} className="menu_container">
         <button
           aria-expanded={state.mobileMenuOpen ? "true" : "false"}
           aria-label="Toggle Navigation Menu"
@@ -123,7 +123,7 @@ const Header = () => {
             </Link>
           </li>
         </ul>
-      </div>
+      </div> */}
     </nav>
   );
 };
