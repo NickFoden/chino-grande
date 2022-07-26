@@ -130,7 +130,7 @@
 }
 
 .page_container {
-  min-height: 85vh;
+  min-height: 70vh;
   overflow-x: hidden;
   padding: 0.5rem;
   z-index: 1;
@@ -145,6 +145,10 @@
 
 .footer_space {
   display: none;
+}
+
+.footer_dd_spacer {
+  height: 75px;
 }
 
 .menu_item_li {

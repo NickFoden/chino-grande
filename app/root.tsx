@@ -65,6 +65,32 @@ export default function App() {
             />
           </>
         )}
+        <script
+          async
+          id="dd"
+          dangerouslySetInnerHTML={{
+            __html: `(function(e, t, r, n) {
+  var o, c, s;
+  o = e.document, c = t.children[0], s = o.createElement("script"), e.StorefrontSDKObject = "StorefrontSDK", e[e.StorefrontSDKObject] = {
+      executeCommand: function(t, r) {
+          e[e.StorefrontSDKObject].buffer.push([t, r])
+      },
+      buffer: []
+  }, s.async = 1, s.src ='https://web-apps.cdn4dd.com/webapps/sdk-storefront/latest/sdk.js' , t.insertBefore(s, c)
+})(window, document.head);
+StorefrontSDK.executeCommand('renderFloatingButton', {
+  businessId: 11095056,
+  businessSlug: 'Chino Grande',
+  floatingBar: true,
+  position: 'bottom',
+  buttonAlignment: 'center',
+  backgroundColor: 'transparent',
+  buttonBackgroundColor: '#0BA508',
+  borderColor: 'transparent',
+  buttonText: 'Order Pickup & Delivery',
+})`,
+          }}
+        />
         <Outlet />
         <ScrollRestoration />
         <Scripts />
